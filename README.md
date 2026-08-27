@@ -56,7 +56,7 @@ Default file names under `inputs/` are encoded near the top of each script. The 
 
 ## Running the workflow
 
-Python dependencies recorded for the analysis include Python 3.13, anndata, NumPy, pandas, SciPy, and statsmodels. The count models use R 4.3 with edgeR and limma. Exact recorded versions are provided in `environment/`.
+Python dependencies recorded for the analysis include Python 3.13, anndata, NumPy, pandas, SciPy, statsmodels, openpyxl, and tabulate. The count models use R 4.3 with edgeR and limma. Exact recorded versions are provided in `environment/`.
 
 After configuring the inputs, run scripts in the order shown above. For example:
 
