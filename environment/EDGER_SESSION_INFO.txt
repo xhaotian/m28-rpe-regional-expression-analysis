@@ -1,0 +1,6 @@
+R: 4.3.3
+edgeR: 4.0.16
+limma: 3.58.1
+Rcpp: 1.1.1-1.1
+locfit: 1.5-9.12
+statmod: 1.5.2
