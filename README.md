@@ -6,7 +6,9 @@ This repository contains the analysis code used to study gene-expression differe
 
 The discovery workflow audits a CELLxGENE H5AD object, aggregates raw UMI counts by donor and region, fits donor-adjusted edgeR quasi-likelihood models, and evaluates paired effect robustness. A second branch tests whether regional effects persist within annotated RPE states and decomposes the observed regional difference into within-state and composition-associated components.
 
-Independent analyses use GSE220155, GSE135922, GSE230348, GSE135092, and PXD080419. These datasets differ in assay, sample size, annotation depth, and tissue composition. Their results are therefore retained as dataset-specific support or feasibility assessments rather than pooled as interchangeable replications.
+Independent analyses use the following public resources: GSE220155 (GEO; paired RNA and same-donor gene-activity support), GSE135922 (GEO; underpowered directional check), GSE230348 (GEO; metadata/manual feasibility review only), GSE135092 (GEO; mixed RPE/choroid tissue-level cross-reference), and PXD080419 (ProteomeXchange/PRIDE; proteomics feasibility assessment). These datasets differ in assay, sample size, annotation depth, and tissue composition. Their results are therefore retained as dataset-specific support or feasibility assessments rather than pooled as interchangeable replications.
+
+The canonical discovery resource is the CELLxGENE RPE dataset (collection `48c15b0c-6039-4e0f-9668-b6b3c0b830ad`; dataset `d21aedc6-f3b9-4021-ab31-69fbd6d1fae5`; DOI `10.64898/2026.07.23.740352`). Its internal source annotations include `Chen_lab` and `Sanes_GSE236566`; the latter is nested within the CELLxGENE resource and is not an independent external cohort. Public source records: [CELLxGENE](https://cellxgene.cziscience.com), [GSE220155](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE220155), [GSE135922](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135922), [GSE230348](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE230348), [GSE135092](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE135092), and [PXD080419](https://www.ebi.ac.uk/pride/archive/projects/PXD080419).
 
 ## Repository structure
 
@@ -71,7 +73,7 @@ Continue with the state and independent-dataset scripts after their prerequisite
 
 ## Statistical scope
 
-The primary discovery comparison is donor paired. State-specific inference is restricted to states meeting the prespecified donor and cell-count thresholds. The GSE220155 analysis uses an expression- and detection-matched empirical null with a fixed random seed and 10,000 draws. Small independent datasets and tissue-level datasets are interpreted within their sample-size and annotation constraints. The workflow supports regional expression associations; it does not establish causality, disease mechanism, or clinical utility.
+The primary discovery comparison is donor paired. State-specific inference is restricted to states meeting the prespecified donor and cell-count thresholds. The GSE220155 analysis uses an expression- and detection-matched empirical null with a fixed random seed and 10,000 draws. Small independent datasets and tissue-level datasets are interpreted within their sample-size and annotation constraints. The workflow supports regional expression associations; it does not establish causality, disease mechanism, or clinical utility. GSE230348 is not a quantitative validation dataset because of incomplete reviewed sample coverage, and PXD080419 is not an assessable negative protein result when a usable processed abundance table and sample map are unavailable.
 
 ## License
 
